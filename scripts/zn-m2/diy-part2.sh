@@ -9,6 +9,8 @@
 # File name: diy-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
+#修改访问地址
+sed -i 's/192.168.1.1/10.0.1.1/g' package/base-files/files/bin/config_generate
 #优先安装 passwall 源
 ./scripts/feeds install -a -f -p openclash
 #./scripts/feeds install -a -f -p passwall_luci
